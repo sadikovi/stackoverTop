@@ -96,7 +96,10 @@
     [components setDay:[components day] - 3]; // - 1 day from current date
     NSDate *fromDate = [defaultCalendar dateFromComponents:components];
     
-    
+    /**
+     * Create url link to retrieve 10 questions.
+     *
+     */
     return [self urlStringForStackOverflowForPage:1
                                       andPageSize:10
                                       andFromDate:fromDate
