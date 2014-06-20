@@ -19,6 +19,16 @@
 		A32195601953C200003F501E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A321955E1953C200003F501E /* MainStoryboard.storyboard */; };
 		A32195631953C200003F501E /* StackoverTopMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195621953C200003F501E /* StackoverTopMasterViewController.m */; };
 		A32195661953C200003F501E /* StackoverTopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195651953C200003F501E /* StackoverTopDetailViewController.m */; };
+		A321957B1953C50A003F501E /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195701953C50A003F501E /* NSObject+SBJSON.m */; };
+		A321957C1953C50A003F501E /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195721953C50A003F501E /* NSString+SBJSON.m */; };
+		A321957D1953C50A003F501E /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195741953C50A003F501E /* SBJSON.m */; };
+		A321957E1953C50A003F501E /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195761953C50A003F501E /* SBJsonBase.m */; };
+		A321957F1953C50A003F501E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195781953C50A003F501E /* SBJsonParser.m */; };
+		A32195801953C50A003F501E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A321957A1953C50A003F501E /* SBJsonWriter.m */; };
+		A32195831953C52C003F501E /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195811953C52C003F501E /* RequestManager.m */; };
+		A32195861953C7EF003F501E /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195851953C7EF003F501E /* APIManager.m */; };
+		A321958A1953D439003F501E /* StackOverFlowQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195891953D439003F501E /* StackOverFlowQuestion.m */; };
+		A321958D1953D536003F501E /* StackOverFlowOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = A321958C1953D536003F501E /* StackOverFlowOwner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +50,27 @@
 		A32195621953C200003F501E /* StackoverTopMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackoverTopMasterViewController.m; sourceTree = "<group>"; };
 		A32195641953C200003F501E /* StackoverTopDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackoverTopDetailViewController.h; sourceTree = "<group>"; };
 		A32195651953C200003F501E /* StackoverTopDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackoverTopDetailViewController.m; sourceTree = "<group>"; };
+		A321956E1953C50A003F501E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		A321956F1953C50A003F501E /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		A32195701953C50A003F501E /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		A32195711953C50A003F501E /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		A32195721953C50A003F501E /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		A32195731953C50A003F501E /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		A32195741953C50A003F501E /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		A32195751953C50A003F501E /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		A32195761953C50A003F501E /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		A32195771953C50A003F501E /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		A32195781953C50A003F501E /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		A32195791953C50A003F501E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		A321957A1953C50A003F501E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		A32195811953C52C003F501E /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		A32195821953C52C003F501E /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		A32195841953C7EF003F501E /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		A32195851953C7EF003F501E /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		A32195881953D439003F501E /* StackOverFlowQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverFlowQuestion.h; sourceTree = "<group>"; };
+		A32195891953D439003F501E /* StackOverFlowQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowQuestion.m; sourceTree = "<group>"; };
+		A321958B1953D536003F501E /* StackOverFlowOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverFlowOwner.h; sourceTree = "<group>"; };
+		A321958C1953D536003F501E /* StackOverFlowOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowOwner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +117,8 @@
 		A321954C1953C200003F501E /* StackoverTop */ = {
 			isa = PBXGroup;
 			children = (
+				A32195871953D422003F501E /* Question */,
+				A321956C1953C4F1003F501E /* Request */,
 				A321955E1953C200003F501E /* MainStoryboard.storyboard */,
 				A32195611953C200003F501E /* StackoverTopMasterViewController.h */,
 				A32195621953C200003F501E /* StackoverTopMasterViewController.m */,
@@ -110,6 +143,49 @@
 				A321955C1953C200003F501E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A321956C1953C4F1003F501E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A321956D1953C50A003F501E /* SBJSON */,
+				A32195821953C52C003F501E /* RequestManager.h */,
+				A32195811953C52C003F501E /* RequestManager.m */,
+				A32195841953C7EF003F501E /* APIManager.h */,
+				A32195851953C7EF003F501E /* APIManager.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		A321956D1953C50A003F501E /* SBJSON */ = {
+			isa = PBXGroup;
+			children = (
+				A321956E1953C50A003F501E /* JSON.h */,
+				A321956F1953C50A003F501E /* NSObject+SBJSON.h */,
+				A32195701953C50A003F501E /* NSObject+SBJSON.m */,
+				A32195711953C50A003F501E /* NSString+SBJSON.h */,
+				A32195721953C50A003F501E /* NSString+SBJSON.m */,
+				A32195731953C50A003F501E /* SBJSON.h */,
+				A32195741953C50A003F501E /* SBJSON.m */,
+				A32195751953C50A003F501E /* SBJsonBase.h */,
+				A32195761953C50A003F501E /* SBJsonBase.m */,
+				A32195771953C50A003F501E /* SBJsonParser.h */,
+				A32195781953C50A003F501E /* SBJsonParser.m */,
+				A32195791953C50A003F501E /* SBJsonWriter.h */,
+				A321957A1953C50A003F501E /* SBJsonWriter.m */,
+			);
+			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		A32195871953D422003F501E /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				A321958B1953D536003F501E /* StackOverFlowOwner.h */,
+				A321958C1953D536003F501E /* StackOverFlowOwner.m */,
+				A32195881953D439003F501E /* StackOverFlowQuestion.h */,
+				A32195891953D439003F501E /* StackOverFlowQuestion.m */,
+			);
+			name = Question;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +259,16 @@
 				A32195571953C200003F501E /* StackoverTopAppDelegate.m in Sources */,
 				A32195631953C200003F501E /* StackoverTopMasterViewController.m in Sources */,
 				A32195661953C200003F501E /* StackoverTopDetailViewController.m in Sources */,
+				A321957B1953C50A003F501E /* NSObject+SBJSON.m in Sources */,
+				A321957C1953C50A003F501E /* NSString+SBJSON.m in Sources */,
+				A321957D1953C50A003F501E /* SBJSON.m in Sources */,
+				A321957E1953C50A003F501E /* SBJsonBase.m in Sources */,
+				A321957F1953C50A003F501E /* SBJsonParser.m in Sources */,
+				A32195801953C50A003F501E /* SBJsonWriter.m in Sources */,
+				A32195831953C52C003F501E /* RequestManager.m in Sources */,
+				A32195861953C7EF003F501E /* APIManager.m in Sources */,
+				A321958A1953D439003F501E /* StackOverFlowQuestion.m in Sources */,
+				A321958D1953D536003F501E /* StackOverFlowOwner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +391,7 @@
 				A321956B1953C200003F501E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

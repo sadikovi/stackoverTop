@@ -8,106 +8,120 @@
 
 #import "StackoverTopMasterViewController.h"
 
-#import "StackoverTopDetailViewController.h"
-
 @interface StackoverTopMasterViewController () {
     NSMutableArray *_objects;
 }
+
+@property (nonatomic, strong) RequestManager *requestManager;
+@property (nonatomic, strong) NSString *url;
 @end
+
+
+#define ST_ITEMS @"items"
 
 @implementation StackoverTopMasterViewController
 
-- (void)awakeFromNib
-{
+#pragma mark - Private Methods
+
+- (RequestManager *)requestManager {
+    if (!_requestManager) {
+        _requestManager = [[RequestManager alloc] init];
+    }
+    
+    return _requestManager;
+}
+
+- (IBAction)updateTable {
+    [self.requestManager setURLString:self.url andHTTPMethod:RequestManagerHTTPMethodGET];
+    [self.requestManager sendRequest];
+}
+
+#pragma mark - View Lifecycle
+
+- (void)awakeFromNib {
     [super awakeFromNib];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender
-{
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
+    
+    self.url = [[APIManager standardManager] urlStringForStackOverflow];
+    self.requestManager.delegate = self;
+    [self.requestManager setURLString:self.url andHTTPMethod:RequestManagerHTTPMethodGET];
+    [self.requestManager sendRequest];
 }
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _objects.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
+    StackOverFlowQuestion *object = _objects[indexPath.row];
+    
+    cell.textLabel.text = object.title;
+    cell.detailTextLabel.text = object.owner.displayName;
+    
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
+
+#pragma mark Request Manager Delegate
+- (void)requestManager:(RequestManager *)manager startProceedingRequest:(NSURLRequest *)request {
+    // do nothing yet;
+    [self.refreshControl beginRefreshing];
+}
+
+- (void)requestManager:(RequestManager *)manager didReceiveResponse:(NSURLResponse *)response {
+    // do nothing yet
+}
+
+- (void)requestManager:(RequestManager *)manager didLoadResult:(id)result {
+    _objects = [NSMutableArray array];
+    
+    if ([result isKindOfClass:[NSDictionary class]]) {
+        NSArray *items = (NSArray *)[result objectForKey:ST_ITEMS];
+        
+        for (id object in items) {
+            if ([object isKindOfClass:[NSDictionary class]]) {
+                StackOverFlowQuestion *question = [StackOverFlowQuestion questionWithParams:object];
+                [_objects addObject:question];
+            }
+        }
+    }
+    
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
+}
+
+- (void)requestManager:(RequestManager *)manager didFailWithError:(NSError *)error {
+    [self.requestManager cancelRequest];
+    [self.refreshControl endRefreshing];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error description]
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok, I got it"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackoverTopDetailViewController.h"
+#import "RequestManager.h"
+#import "APIManager.h"
+#import "StackOverFlowQuestion.h"
+#import "StackOverFlowOwner.h"
 
 @interface StackoverTopMasterViewController : UITableViewController
+<RequestManagerDelegate>
 
 @end
