@@ -1,4 +1,4 @@
 stackoverTop
 ============
 
-Top questions for stackoverflow
+Simple app to display top 10 questions from stackoverflow
