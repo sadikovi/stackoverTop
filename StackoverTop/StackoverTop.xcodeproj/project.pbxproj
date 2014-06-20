@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A32195471953C200003F501E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32195461953C200003F501E /* UIKit.framework */; };
+		A32195491953C200003F501E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32195481953C200003F501E /* Foundation.framework */; };
+		A321954B1953C200003F501E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A321954A1953C200003F501E /* CoreGraphics.framework */; };
+		A32195511953C200003F501E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A321954F1953C200003F501E /* InfoPlist.strings */; };
+		A32195531953C200003F501E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195521953C200003F501E /* main.m */; };
+		A32195571953C200003F501E /* StackoverTopAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195561953C200003F501E /* StackoverTopAppDelegate.m */; };
+		A32195591953C200003F501E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A32195581953C200003F501E /* Default.png */; };
+		A321955B1953C200003F501E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A321955A1953C200003F501E /* Default@2x.png */; };
+		A321955D1953C200003F501E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A321955C1953C200003F501E /* Default-568h@2x.png */; };
+		A32195601953C200003F501E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A321955E1953C200003F501E /* MainStoryboard.storyboard */; };
+		A32195631953C200003F501E /* StackoverTopMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195621953C200003F501E /* StackoverTopMasterViewController.m */; };
+		A32195661953C200003F501E /* StackoverTopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195651953C200003F501E /* StackoverTopDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A32195431953C200003F501E /* StackoverTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackoverTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32195461953C200003F501E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A32195481953C200003F501E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A321954A1953C200003F501E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A321954E1953C200003F501E /* StackoverTop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StackoverTop-Info.plist"; sourceTree = "<group>"; };
+		A32195501953C200003F501E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A32195521953C200003F501E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A32195541953C200003F501E /* StackoverTop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackoverTop-Prefix.pch"; sourceTree = "<group>"; };
+		A32195551953C200003F501E /* StackoverTopAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackoverTopAppDelegate.h; sourceTree = "<group>"; };
+		A32195561953C200003F501E /* StackoverTopAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackoverTopAppDelegate.m; sourceTree = "<group>"; };
+		A32195581953C200003F501E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A321955A1953C200003F501E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A321955C1953C200003F501E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A321955F1953C200003F501E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A32195611953C200003F501E /* StackoverTopMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackoverTopMasterViewController.h; sourceTree = "<group>"; };
+		A32195621953C200003F501E /* StackoverTopMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackoverTopMasterViewController.m; sourceTree = "<group>"; };
+		A32195641953C200003F501E /* StackoverTopDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackoverTopDetailViewController.h; sourceTree = "<group>"; };
+		A32195651953C200003F501E /* StackoverTopDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackoverTopDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A32195401953C200003F501E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32195471953C200003F501E /* UIKit.framework in Frameworks */,
+				A32195491953C200003F501E /* Foundation.framework in Frameworks */,
+				A321954B1953C200003F501E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A321953A1953C200003F501E = {
+			isa = PBXGroup;
+			children = (
+				A321954C1953C200003F501E /* StackoverTop */,
+				A32195451953C200003F501E /* Frameworks */,
+				A32195441953C200003F501E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A32195441953C200003F501E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A32195431953C200003F501E /* StackoverTop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A32195451953C200003F501E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32195461953C200003F501E /* UIKit.framework */,
+				A32195481953C200003F501E /* Foundation.framework */,
+				A321954A1953C200003F501E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A321954C1953C200003F501E /* StackoverTop */ = {
+			isa = PBXGroup;
+			children = (
+				A321955E1953C200003F501E /* MainStoryboard.storyboard */,
+				A32195611953C200003F501E /* StackoverTopMasterViewController.h */,
+				A32195621953C200003F501E /* StackoverTopMasterViewController.m */,
+				A32195641953C200003F501E /* StackoverTopDetailViewController.h */,
+				A32195651953C200003F501E /* StackoverTopDetailViewController.m */,
+				A321954D1953C200003F501E /* Supporting Files */,
+			);
+			path = StackoverTop;
+			sourceTree = "<group>";
+		};
+		A321954D1953C200003F501E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A32195551953C200003F501E /* StackoverTopAppDelegate.h */,
+				A32195561953C200003F501E /* StackoverTopAppDelegate.m */,
+				A321954E1953C200003F501E /* StackoverTop-Info.plist */,
+				A321954F1953C200003F501E /* InfoPlist.strings */,
+				A32195521953C200003F501E /* main.m */,
+				A32195541953C200003F501E /* StackoverTop-Prefix.pch */,
+				A32195581953C200003F501E /* Default.png */,
+				A321955A1953C200003F501E /* Default@2x.png */,
+				A321955C1953C200003F501E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A32195421953C200003F501E /* StackoverTop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A32195691953C200003F501E /* Build configuration list for PBXNativeTarget "StackoverTop" */;
+			buildPhases = (
+				A321953F1953C200003F501E /* Sources */,
+				A32195401953C200003F501E /* Frameworks */,
+				A32195411953C200003F501E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StackoverTop;
+			productName = StackoverTop;
+			productReference = A32195431953C200003F501E /* StackoverTop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A321953B1953C200003F501E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = StackoverTop;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Ivan Sadikov";
+			};
+			buildConfigurationList = A321953E1953C200003F501E /* Build configuration list for PBXProject "StackoverTop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A321953A1953C200003F501E;
+			productRefGroup = A32195441953C200003F501E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A32195421953C200003F501E /* StackoverTop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A32195411953C200003F501E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32195511953C200003F501E /* InfoPlist.strings in Resources */,
+				A32195591953C200003F501E /* Default.png in Resources */,
+				A321955B1953C200003F501E /* Default@2x.png in Resources */,
+				A321955D1953C200003F501E /* Default-568h@2x.png in Resources */,
+				A32195601953C200003F501E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A321953F1953C200003F501E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32195531953C200003F501E /* main.m in Sources */,
+				A32195571953C200003F501E /* StackoverTopAppDelegate.m in Sources */,
+				A32195631953C200003F501E /* StackoverTopMasterViewController.m in Sources */,
+				A32195661953C200003F501E /* StackoverTopDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A321954F1953C200003F501E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A32195501953C200003F501E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A321955E1953C200003F501E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A321955F1953C200003F501E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A32195671953C200003F501E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A32195681953C200003F501E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A321956A1953C200003F501E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StackoverTop/StackoverTop-Prefix.pch";
+				INFOPLIST_FILE = "StackoverTop/StackoverTop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A321956B1953C200003F501E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StackoverTop/StackoverTop-Prefix.pch";
+				INFOPLIST_FILE = "StackoverTop/StackoverTop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A321953E1953C200003F501E /* Build configuration list for PBXProject "StackoverTop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A32195671953C200003F501E /* Debug */,
+				A32195681953C200003F501E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A32195691953C200003F501E /* Build configuration list for PBXNativeTarget "StackoverTop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A321956A1953C200003F501E /* Debug */,
+				A321956B1953C200003F501E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A321953B1953C200003F501E /* Project object */;
+}
