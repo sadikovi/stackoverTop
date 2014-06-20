@@ -36,6 +36,20 @@
     [self.requestManager sendRequest];
 }
 
+- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock {
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if (!error) {
+                                   UIImage *image = [[UIImage alloc] initWithData:data];
+                                   completionBlock(YES,image);
+                               } else{
+                                   completionBlock(NO,nil);
+                               }
+                           }];
+}
+
 #pragma mark - View Lifecycle
 
 - (void)awakeFromNib {
@@ -44,6 +58,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"StackOverTop";
     
     self.refreshControl = [[UIRefreshControl alloc]init];
     [self.refreshControl addTarget:self action:@selector(updateTable) forControlEvents:UIControlEventValueChanged];
@@ -70,7 +86,24 @@
     StackOverFlowQuestion *object = _objects[indexPath.row];
     
     cell.textLabel.text = object.title;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.detailTextLabel.text = object.owner.displayName;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    
+    if (object.owner.profileImage) {
+        cell.imageView.image = object.owner.profileImage;
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"default_icon.png"];
+        [self downloadImageWithURL:[NSURL URLWithString:object.owner.profileImageUrl]
+                   completionBlock:^(BOOL succeeded, UIImage *image) {
+                       if (succeeded) {
+                           cell.imageView.image = image;
+                           [cell setNeedsLayout];
+                           object.owner.profileImage = image;
+                       }
+                   }];
+        
+    }
     
     return cell;
 }
@@ -78,8 +111,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        StackOverFlowQuestion *object = _objects[indexPath.row];
+        [[segue destinationViewController] setQuestion:object];
     }
 }
 

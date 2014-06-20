@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackOverFlowQuestion.h"
 
 @interface StackoverTopDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *displayName;
+@property (weak, nonatomic) IBOutlet UILabel *reputation;
+@property (weak, nonatomic) IBOutlet UILabel *viewsCount;
+@property (weak, nonatomic) IBOutlet UILabel *answersCount;
+@property (weak, nonatomic) IBOutlet UILabel *score;
+@property (weak, nonatomic) IBOutlet UILabel *tags;
+@property (weak, nonatomic) IBOutlet UILabel *questionText;
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) StackOverFlowQuestion *question;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

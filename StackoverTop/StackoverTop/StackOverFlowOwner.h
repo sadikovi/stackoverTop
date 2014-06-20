@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RequestManager.h"
 
 @interface StackOverFlowOwner : NSObject
 
 @property (nonatomic, readonly) NSInteger reputation;
 @property (nonatomic, strong, readonly) NSString *userId;
-@property (nonatomic, strong, readonly) NSString *profileImage;
+@property (nonatomic, strong, readonly) NSString *profileImageUrl;
 @property (nonatomic, strong, readonly) NSString *displayName;
 @property (nonatomic, strong, readonly) NSString *link;
+@property (nonatomic, strong) UIImage *profileImage;
 
 + (StackOverFlowOwner *)ownerWithParams:(NSDictionary *)ownerParams;
 - (id)initWithParams:(NSDictionary *)ownerParams;

@@ -66,7 +66,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="64"/>
+            <point key="canvasLocation" x="395" y="-60"/>
         </scene>
         <!--Stackover Top Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -76,28 +76,125 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="OKM-es-f9S">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cjN-NE-PaE"/>
+                                    <constraint firstAttribute="width" constant="100" id="e2d-pI-5Ig"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User name" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="SUC-SF-Gi8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5Gg-w3-SYo"/>
+                                    <constraint firstAttribute="width" constant="152" id="rNa-Td-BDS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reputation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38d-O9-2gW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AiM-vm-If3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-HV-137">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" type="user" id="EbC-70-i8i"/>
+                                    <constraint firstAttribute="height" constant="25" type="user" id="Y7m-Ul-nDR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ans" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsE-N5-Nkt">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" type="user" id="bFr-h6-BXs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOy-3v-prl">
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" type="user" id="4lc-t2-ect"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tags" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-uK-Sb5">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="bKB-kB-t77"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" text="Question" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="svF-G1-xff">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Pmc-Nx-FtM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstAttribute="bottom" secondItem="kOy-3v-prl" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="5Iv-ay-H0G"/>
+                            <constraint firstItem="kOy-3v-prl" firstAttribute="top" secondItem="svF-G1-xff" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D9f-ch-qhN"/>
+                            <constraint firstItem="VsE-N5-Nkt" firstAttribute="top" secondItem="svF-G1-xff" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ju3-H5-R0y"/>
+                            <constraint firstAttribute="bottom" secondItem="d3Q-HV-137" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Kol-Th-UCQ"/>
+                            <constraint firstItem="svF-G1-xff" firstAttribute="top" secondItem="uQ4-uK-Sb5" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Oph-yz-8q6"/>
+                            <constraint firstItem="svF-G1-xff" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="25" id="ZNd-eC-VnL"/>
+                            <constraint firstItem="uQ4-uK-Sb5" firstAttribute="top" secondItem="OKM-es-f9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bWw-Xp-JxF"/>
+                            <constraint firstItem="uQ4-uK-Sb5" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cYr-Qu-zqK"/>
+                            <constraint firstAttribute="bottom" secondItem="VsE-N5-Nkt" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ccE-sL-Hm3"/>
+                            <constraint firstItem="SUC-SF-Gi8" firstAttribute="leading" secondItem="OKM-es-f9S" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ebc-nq-jtu"/>
+                            <constraint firstItem="38d-O9-2gW" firstAttribute="trailing" secondItem="SUC-SF-Gi8" secondAttribute="trailing" type="default" id="htr-3o-tb2"/>
+                            <constraint firstAttribute="trailing" secondItem="kOy-3v-prl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ioJ-iM-m8Q"/>
+                            <constraint firstItem="OKM-es-f9S" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jYU-oc-I1s"/>
+                            <constraint firstItem="VsE-N5-Nkt" firstAttribute="centerX" secondItem="uQ4-uK-Sb5" secondAttribute="centerX" type="default" id="ofe-xk-2DG"/>
+                            <constraint firstItem="SUC-SF-Gi8" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pLc-jm-0Sv"/>
+                            <constraint firstItem="38d-O9-2gW" firstAttribute="leading" secondItem="OKM-es-f9S" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pv6-54-RQK"/>
+                            <constraint firstItem="OKM-es-f9S" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="qWo-We-szS"/>
+                            <constraint firstItem="d3Q-HV-137" firstAttribute="top" secondItem="svF-G1-xff" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tdI-2H-cKX"/>
+                            <constraint firstItem="38d-O9-2gW" firstAttribute="top" secondItem="SUC-SF-Gi8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vDu-x0-t7g"/>
+                            <constraint firstItem="d3Q-HV-137" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vPt-Pa-R4N"/>
+                            <constraint firstAttribute="trailing" secondItem="uQ4-uK-Sb5" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wZ1-GH-xXQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Detail" id="26">
+                        <barButtonItem key="rightBarButtonItem" title="Check on SOF" id="PDC-dh-SKm">
+                            <connections>
+                                <action selector="openInSafari:" destination="21" id="pdU-rR-zsf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="27" id="28"/>
+                        <outlet property="answersCount" destination="VsE-N5-Nkt" id="nIi-2d-fOT"/>
+                        <outlet property="displayName" destination="SUC-SF-Gi8" id="bCx-7z-NuV"/>
+                        <outlet property="profileImage" destination="OKM-es-f9S" id="CWQ-La-YYU"/>
+                        <outlet property="questionText" destination="svF-G1-xff" id="TpD-fZ-bnJ"/>
+                        <outlet property="reputation" destination="38d-O9-2gW" id="1Yl-E5-bcH"/>
+                        <outlet property="score" destination="kOy-3v-prl" id="DPh-US-Nd7"/>
+                        <outlet property="tags" destination="uQ4-uK-Sb5" id="vbw-kD-pK1"/>
+                        <outlet property="viewsCount" destination="d3Q-HV-137" id="aIb-gi-HOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="-22"/>
+            <point key="canvasLocation" x="911" y="33"/>
         </scene>
     </scenes>
     <classes>
@@ -107,7 +204,14 @@
         <class className="StackoverTopDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StackoverTopDetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="answersCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="displayName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="questionText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="reputation" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="score" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tags" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewsCount" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="StackoverTopMasterViewController" superclassName="UITableViewController">

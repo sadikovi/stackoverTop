@@ -90,6 +90,10 @@ static const NSTimeInterval kTimeOutInterval = 180.0;
     id result = [jsonParser objectWithString:response];
     
     if (result == nil) {
+        if (response == nil) {
+            return data;
+        }
+        
         return response;
     }
     

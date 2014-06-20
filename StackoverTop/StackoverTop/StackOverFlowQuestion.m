@@ -105,10 +105,10 @@
     NSArray *tags = (NSArray *)[params objectForKey:ST_TAGS];
     NSDictionary *owner = [params objectForKey:ST_OWNER];
     NSString *title = (NSString *)[params objectForKey:ST_TITLE];
-    BOOL isAnswered = (BOOL)[params objectForKey:ST_IS_ANSWERED];
-    NSInteger viewsCount = (NSInteger)[params objectForKey:ST_VIEW_COUNT];
-    NSInteger answersCount = (NSInteger)[params objectForKey:ST_ANSWER_COUNT];
-    NSInteger score = (NSInteger)[params objectForKey:ST_SCORE];
+    BOOL isAnswered = [[params objectForKey:ST_IS_ANSWERED] boolValue];
+    NSInteger viewsCount = [[params objectForKey:ST_VIEW_COUNT] integerValue];
+    NSInteger answersCount = [[params objectForKey:ST_ANSWER_COUNT] integerValue];
+    NSInteger score = [[params objectForKey:ST_SCORE] integerValue];
     NSString *link = (NSString *)[params objectForKey:ST_LINK];
     
     return [self initWithTags:tags
@@ -119,18 +119,6 @@
              andAnsweresCount:answersCount
                      andScore:score
                       andLink:link];
-}
-
-+ (StackOverFlowQuestion *)questionWithTags:(NSArray *)tags andOwner:(NSDictionary *)ownerParams andTitle:(NSString *)title andIsAnswered:(BOOL)isAnswered andViewsCount:(NSInteger)viewsCount andAnsweresCount:(NSInteger)answeresCount andScore:(NSInteger)score andLink:(NSString *)link {
-    StackOverFlowQuestion *question = [[StackOverFlowQuestion alloc] initWithTags:tags
-                                                                         andOwner:ownerParams
-                                                                         andTitle:title
-                                                                    andIsAnswered:isAnswered
-                                                                    andViewsCount:viewsCount
-                                                                 andAnsweresCount:answeresCount
-                                                                         andScore:score
-                                                                          andLink:link];
-    return question;
 }
 
 + (StackOverFlowQuestion *)questionWithParams:(NSDictionary *)params {

@@ -29,6 +29,7 @@
 		A32195861953C7EF003F501E /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195851953C7EF003F501E /* APIManager.m */; };
 		A321958A1953D439003F501E /* StackOverFlowQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = A32195891953D439003F501E /* StackOverFlowQuestion.m */; };
 		A321958D1953D536003F501E /* StackOverFlowOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = A321958C1953D536003F501E /* StackOverFlowOwner.m */; };
+		A3801B40195409C00051E417 /* default_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A3801B3F195409C00051E417 /* default_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		A32195891953D439003F501E /* StackOverFlowQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowQuestion.m; sourceTree = "<group>"; };
 		A321958B1953D536003F501E /* StackOverFlowOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverFlowOwner.h; sourceTree = "<group>"; };
 		A321958C1953D536003F501E /* StackOverFlowOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowOwner.m; sourceTree = "<group>"; };
+		A3801B3F195409C00051E417 /* default_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				A32195521953C200003F501E /* main.m */,
 				A32195541953C200003F501E /* StackoverTop-Prefix.pch */,
 				A32195581953C200003F501E /* Default.png */,
+				A3801B3F195409C00051E417 /* default_icon.png */,
 				A321955A1953C200003F501E /* Default@2x.png */,
 				A321955C1953C200003F501E /* Default-568h@2x.png */,
 			);
@@ -245,6 +248,7 @@
 				A321955B1953C200003F501E /* Default@2x.png in Resources */,
 				A321955D1953C200003F501E /* Default-568h@2x.png in Resources */,
 				A32195601953C200003F501E /* MainStoryboard.storyboard in Resources */,
+				A3801B40195409C00051E417 /* default_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

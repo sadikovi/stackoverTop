@@ -16,34 +16,50 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+- (void)setQuestion:(StackOverFlowQuestion *)newQuestion {
+    if (_question != newQuestion) {
+        _question = newQuestion;
         
         // Update the view.
         [self configureView];
     }
 }
 
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+- (NSString *)stringFromArray:(NSArray *)array {
+    NSString *result = [NSString string];
+    for (NSString *object in array) {
+        result = [result stringByAppendingString:[NSString stringWithFormat:@"%@   ", object]];
     }
+    
+    return result;
 }
 
-- (void)viewDidLoad
-{
+- (IBAction)openInSafari:(id)sender {
+    NSURL *url = [NSURL URLWithString:_question.link];
+    if (![[UIApplication sharedApplication] openURL:url])
+        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+}
+
+- (void)configureView {
+    // Update the user interface for the detail item.
+    self.profileImage.image = _question.owner.profileImage;
+    self.displayName.text = _question.owner.displayName;
+    self.reputation.text = [NSString stringWithFormat:@"Reputation: %d", _question.owner.reputation];
+    self.viewsCount.text = [NSString stringWithFormat:@"Views: %d", _question.viewsCount];
+    self.answersCount.text = [NSString stringWithFormat:@"Answers: %d", _question.answersCount];
+    self.score.text = [NSString stringWithFormat:@"Score: %d", _question.score];
+    self.tags.text = [self stringFromArray:_question.tags];
+    self.questionText.text = _question.title;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"Question";
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

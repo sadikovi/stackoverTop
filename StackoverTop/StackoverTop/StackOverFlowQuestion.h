@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "StackOverFlowOwner.h"
+#import "RequestManager.h"
 
 @interface StackOverFlowQuestion : NSObject
 
@@ -21,11 +22,9 @@
 @property (nonatomic, strong, readonly) NSString *link;
 
 - (id)initWithParams:(NSDictionary *)params;
-+ (StackOverFlowQuestion *)questionWithParams:(NSDictionary *)params;
-
-+ (StackOverFlowQuestion *)questionWithTags:(NSArray *)tags andOwner:(NSDictionary *)ownerParams andTitle:(NSString *)title andIsAnswered:(BOOL)isAnswered andViewsCount:(NSInteger)viewsCount andAnsweresCount:(NSInteger)answeresCount andScore:(NSInteger)score andLink:(NSString *)link;
 
 - (id)initWithTags:(NSArray *)tags andOwner:(NSDictionary *)ownerParams andTitle:(NSString *)title andIsAnswered:(BOOL)isAns andViewsCount:(NSInteger)viewsCount andAnsweresCount:(NSInteger)answeresCount andScore:(NSInteger)sc andLink:(NSString *)link;
 
++ (StackOverFlowQuestion *)questionWithParams:(NSDictionary *)params;
 
 @end

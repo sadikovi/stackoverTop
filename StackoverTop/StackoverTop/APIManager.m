@@ -10,14 +10,6 @@
 
 #define URL @"http://api.stackexchange.com/2.2/questions?"
 #define END_OF_URL_PARAMETERS @"site=stackoverflow"
-//
-//page=1
-//&pagesize=15
-//&fromdate=1403136000
-//&todate=1403395200
-//&order=asc
-//&sort=hot
-//&site=stackoverflow
 
 @implementation APIManager
 

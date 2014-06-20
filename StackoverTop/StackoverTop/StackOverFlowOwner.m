@@ -16,11 +16,13 @@
 #define LINK            @"link"
 
 @interface StackOverFlowOwner()
+
 @property (nonatomic) NSInteger pReputation;
 @property (nonatomic, strong) NSString *pUserId;
-@property (nonatomic, strong) NSString *pProfileImage;
+@property (nonatomic, strong) NSString *pProfileImageUrl;
 @property (nonatomic, strong) NSString *pDisplayName;
 @property (nonatomic, strong) NSString *pLink;
+
 @end
 
 
@@ -36,8 +38,8 @@
     return self.pUserId;
 }
 
-- (NSString *)profileImage {
-    return  self.pProfileImage;
+- (NSString *)profileImageUrl {
+    return  self.pProfileImageUrl;
 }
 
 - (NSString *)displayName {
@@ -55,7 +57,7 @@
     if (self) {
         self.pReputation = reputation;
         self.pUserId = userid;
-        self.pProfileImage = profileImage;
+        self.pProfileImageUrl = profileImage;
         self.pDisplayName = name;
         self.pLink = link;
     }
